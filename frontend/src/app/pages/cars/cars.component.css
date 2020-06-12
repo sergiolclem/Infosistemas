@@ -1,0 +1,10 @@
+.cars-main-container{
+    display: flex;
+    justify-content: center;
+}
+.cars-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 40%;
+}
