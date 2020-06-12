@@ -34,3 +34,17 @@ Projeto proposto pela Infosistemas para fins de processo seletivo. O projeto con
  
  Nodemon é uma biblioteca que auxilia o desenvolvedor detectando as mudanças no código e, automaticamente, *restartando* o servidor. 
  *(dev mode only)*
+
+ ## Módulos de teste
+
+ ### [Mocha](https://mochajs.org/)
+
+*Test framework* para Node.js.
+
+ ### [Sinon](https://sinonjs.org/)
+ 
+Provedor de *spies*, *mocks* e *stubs* para *frameworks unit tests*;
+
+ ### [Chai](https://www.chaijs.com/)
+
+ Biblioteca de asserção para Node.js.
