@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js",
-    "teste": "mocha"
+    "test": "mocha ./test/**/*.test.js"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +18,9 @@
     "sqlite3": "^4.2.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "mocha": "^8.0.1",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "sinon": "^9.0.2"
   }
 }

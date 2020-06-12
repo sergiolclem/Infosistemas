@@ -4,22 +4,13 @@ const update = require('../repositories/update');
 // Table Names
 const tableNames = require('../../lib/table-names');
 
-async function execute(req, res) {
+async function execute(carToUpdate) {
     try {
-        const { id, license_plate, chassi, renavam, model, company, year } = req.body;
-        let response = await update.update(tableNames.cars, {
-            id,
-            license_plate,
-            chassi,
-            renavam,
-            model,
-            company,
-            year
-        });
-        response ? res.sendStatus(200) : res.sendStatus(404);
+        let response = await update.update(tableNames.cars, carToUpdate);
+        let statusOk = 200, statusNotFound = 404;
+        return response ? statusOk : statusNotFound;
     } catch (error) {
         console.log(error);
-        res.status(500);
     }
 }
 

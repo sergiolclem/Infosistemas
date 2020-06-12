@@ -5,46 +5,59 @@ const carDetail = require('../interactors/car-detail.bs');
 const carUpdate = require('../interactors/car-update.bs');
 const carDelete = require('../interactors/car-delete.bs');
 
+// Utils
+const reqUtils = require('../utils/request.util');
+const { utils } = require('mocha');
+
 module.exports = {
-    createCar: (req, res) => {
+    createCar: async (req, res) => {
         try {
-            carCreate.execute(req, res);
+            let carToCreate = reqUtils.extractCarToCreate(req);
+            let newCarId = await carCreate.execute(carToCreate);
+            res.send(newCarId);
         } catch (error) {
             console.log(error);
             res.status(500);
         }
     },
 
-    listCars: (req, res) => {
+    listCars: async (req, res) => {
         try {
-            carList.execute(req, res);
+            let cars = await carList.execute();
+            res.send(cars);
         } catch (error) {
             console.log(error);
             res.status(500);
         }
     },
 
-    getCar: (req, res) => {
+    getCar: async (req, res) => {
         try {
-            carDetail.execute(req, res);
+            let id = reqUtils.extractId(req);
+            let car = await carDetail.execute(id);
+            res.send(car);
         } catch (error) {
             console.log(error);
             res.status(500);
         }
     },
 
-    updateCar: (req, res) => {
+    updateCar: async (req, res) => {
         try {
-            carUpdate.execute(req, res);
+            let carToUpdate = reqUtils.extractCarToUpdate(req);
+            let status = await carUpdate.execute(carToUpdate);
+            res.sendStatus(status);
         } catch (error) {
             console.log(error);
             res.status(500);
         }
     },
 
-    deleteCar: (req, res) => {
+    deleteCar: async (req, res) => {
         try {
-            carDelete.execute(req, res);
+            let id = reqUtils.extractId(req);
+            let operationStatus = await carDelete.execute(id);
+            res.sendStatus(operationStatus);
         } catch (error) {
             console.log(error);
             res.status(500);

@@ -4,13 +4,11 @@ const read = require('../repositories/read');
 // Table Names
 const tableNames = require('../../lib/table-names');
 
-async function execute(req, res) {
+async function execute() {
     try {
-        let cars = await read.getList(tableNames.cars);
-        res.send(cars);
+        return await read.getList(tableNames.cars);
     } catch (error) {
         console.log(error);
-        res.status(500);
     }
 }
 
