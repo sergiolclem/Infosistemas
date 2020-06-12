@@ -48,3 +48,13 @@ Provedor de *spies*, *mocks* e *stubs* para *frameworks unit tests*;
  ### [Chai](https://www.chaijs.com/)
 
  Biblioteca de asserção para Node.js.
+
+ ## Principais tecnologias/bibliotecas utilizadas - FRONTEND
+
+ ### [Angular](https://angular.io/)
+ 
+ Um dos principais frameworks para desenvolvimento de SPA.
+
+ ### [Angular Material](https://material.angular.io/)
+
+ Componentes UI e componentes Material Design para *mobile* e aplicações *web*.
