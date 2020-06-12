@@ -1,15 +1,15 @@
 <mat-card>
     <mat-card-header>
-        <mat-card-title>Lista de Carros</mat-card-title>
+        <mat-card-title>Lista de Veículos</mat-card-title>
     </mat-card-header>
     <mat-card-content [ngSwitch]="loadingSpinner">
         <app-loading-spinner *ngSwitchCase="true"></app-loading-spinner>
-        <mat-list *ngSwitchCase="false">
-            <mat-list-item *ngFor="let car of cars">
+        <mat-nav-list *ngSwitchCase="false">
+            <mat-list-item *ngFor="let car of cars" (click)="openCarDetail(car)">
                 <mat-icon mat-list-icon>directions_car</mat-icon>
                 <div matLine>{{ car.model }}, {{ car.company }}</div>
                 <div matLine>{{ car.year }}</div>
             </mat-list-item>
-        </mat-list>
+        </mat-nav-list>
     </mat-card-content>
 </mat-card>

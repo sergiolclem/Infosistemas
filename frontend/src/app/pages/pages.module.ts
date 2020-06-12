@@ -6,13 +6,15 @@ import { SharedModule } from '../shared/shared.module';
 import { CarsComponent } from './cars/cars.component';
 import { CarsMenuComponent } from './cars/cars-menu/cars-menu.component';
 import { CarsListComponent } from './cars/cars-list/cars-list.component';
+import { CarDetailComponent } from './cars/cars-list/car-detail/car-detail.component';
 
 
 @NgModule({
   declarations: [
     CarsComponent,
     CarsMenuComponent,
-    CarsListComponent
+    CarsListComponent,
+    CarDetailComponent
   ],
   imports: [
     CommonModule,

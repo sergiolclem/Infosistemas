@@ -13,3 +13,9 @@
     height: 100%;
     margin-right: 20px;
 }
+.mat-drawer-container{
+    height: 100%;
+}
+:host{
+    flex-grow: 1;
+}

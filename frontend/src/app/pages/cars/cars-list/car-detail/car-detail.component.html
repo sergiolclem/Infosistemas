@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>{{ car.model }}, {{ car.company }}</h1>
+<div mat-dialog-content>
+    <mat-list>
+        <h3 matSubheader>Informações adicionais</h3>
+        <mat-list-item>Id do Veículo: {{ car.id }}</mat-list-item>
+        <mat-list-item>Placa do Veículo: {{ car.license_plate }}</mat-list-item>
+        <mat-list-item>Chassi do Veículo: {{ car.chassi }}</mat-list-item>
+        <mat-list-item>Renavam do Veículo: {{ car.renavam }}</mat-list-item>
+        <mat-list-item>Ano do Veículo: {{ car.year }}</mat-list-item>
+    </mat-list>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+</div>
