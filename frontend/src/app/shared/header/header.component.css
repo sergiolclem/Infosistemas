@@ -1,0 +1,10 @@
+.header{
+    display: flex;
+    background-color: #232F3E;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+h3{
+    margin: 10px
+}
