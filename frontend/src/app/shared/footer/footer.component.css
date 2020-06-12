@@ -1,0 +1,11 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: #232F3E;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+h4{
+    margin: 10px;
+}
