@@ -11,12 +11,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     CommonModule,
@@ -33,6 +35,7 @@ import { FooterComponent } from './footer/footer.component';
   exports: [
     HeaderComponent,
     FooterComponent,
+    LoadingSpinnerComponent,
     
     // Materia design modules
     MatButtonModule,
