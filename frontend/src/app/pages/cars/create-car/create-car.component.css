@@ -1,0 +1,26 @@
+.card-content{
+    padding-top: 20px;
+}
+.car-model, .car-company{
+    font-size: large;
+    width: 450px;
+    margin-right: 30px;
+}
+.first-input-row, .second-input-row, .third-input-row{
+    display: flex;
+    justify-content: flex-start;
+}
+.year, .license-plate, .chassi, .renavam{
+    margin-right: 30px;
+}
+.add-button{
+    display: flex;
+    justify-content: flex-end;
+}
+.mat-button{
+    background-color: #42CB6F;
+    color: #ffffff;
+}
+.mat-button[disabled]{
+    color: rgba(255, 255, 255, .5);
+}

@@ -19,4 +19,9 @@ export class CarsService {
     let url = API_URL + '/cars';
     return this.http.get(url) as Observable<Car[]>;
   }
+
+  createCar(newCar: Car) {
+    let url = API_URL + '/create';
+    return this.http.post(url, newCar);
+  }
 }

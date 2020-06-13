@@ -1,0 +1,49 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Adicionar Novo Veículo</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="card-content">
+        <form action="submit" [formGroup]="newCar">
+
+            <div class="first-input-row">
+                <mat-form-field class="car-model">
+                    <mat-label>Modelo do veículo</mat-label>
+                    <input matInput type="text" formControlName="model" autocomplete="off">
+                </mat-form-field>
+
+                <mat-form-field class="car-company">
+                    <mat-label>Fabricante</mat-label>
+                    <input matInput type="text" formControlName="company" autocomplete="off">
+                </mat-form-field>
+            </div>
+
+            <div class="second-input-row">
+                <mat-form-field class="year">
+                    <mat-label>Ano do veículo</mat-label>
+                    <input matInput type="text" formControlName="year" autocomplete="off">
+                </mat-form-field>
+
+                <mat-form-field class="license-plate">
+                    <mat-label>Placa do veículo</mat-label>
+                    <input matInput type="text" formControlName="license_plate" autocomplete="off">
+                </mat-form-field>
+            </div>
+
+            <div class="third-input-row">
+                <mat-form-field class="chassi">
+                    <mat-label>Chassi</mat-label>
+                    <input matInput type="text" formControlName="chassi" autocomplete="off">
+                </mat-form-field>
+
+                <mat-form-field class="renavam">
+                    <mat-label>Renavam</mat-label>
+                    <input matInput type="text" formControlName="renavam" autocomplete="off">
+                </mat-form-field>
+            </div><hr>
+
+            <div class="add-button">
+                <button mat-button [disabled]="newCar.invalid" (click)="createCar()">Adicionar</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

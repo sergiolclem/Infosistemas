@@ -7,6 +7,7 @@ import { CarsComponent } from './cars/cars.component';
 import { CarsMenuComponent } from './cars/cars-menu/cars-menu.component';
 import { CarsListComponent } from './cars/cars-list/cars-list.component';
 import { CarDetailComponent } from './cars/cars-list/car-detail/car-detail.component';
+import { CreateCarComponent } from './cars/create-car/create-car.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CarDetailComponent } from './cars/cars-list/car-detail/car-detail.compo
     CarsComponent,
     CarsMenuComponent,
     CarsListComponent,
-    CarDetailComponent
+    CarDetailComponent,
+    CreateCarComponent
   ],
   imports: [
     CommonModule,

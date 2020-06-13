@@ -1,17 +1,8 @@
-<!-- <mat-grid-list class="cars-main-container" cols="3">
-    <mat-grid-tile>
-        <app-cars-menu class="cars-menu"></app-cars-menu>
-    </mat-grid-tile>
-    <mat-grid-tile colspan="2">
-        <app-cars-list class="cars-list-content"></app-cars-list>
-    </mat-grid-tile>
-</mat-grid-list> -->
-
 <mat-drawer-container class="container">
     <mat-drawer mode="side" opened>
         <app-cars-menu></app-cars-menu>
     </mat-drawer>
     <mat-drawer-content>
-        <app-cars-list></app-cars-list>
+        <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>
